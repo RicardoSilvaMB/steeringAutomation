@@ -18,8 +18,9 @@ for bucket in list_bucket_names:
     object = s3_getGB.Bucket(bucket)
     for my_bucket_object in object.objects.all():
         size_byte_total += my_bucket_object.size   
-    totalsize_GB += size_byte_total/ (1024 * 1024 * 1024)
-    totalsize_GB = round(totalsize_GB, 2)
+    totalsize_GB += size_byte_total / (1024 * 1024 * 1024)
+    totalsize_GB = round(totalsize_GB, 4)
+#Faz para cada tipo de S3
 print(size_byte_total, "Bytes") 
 print (totalsize_GB , "GB")
 ################################################################################################
